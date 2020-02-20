@@ -11,6 +11,8 @@ var randomDay = Math.ceil(Math.random() * 29);
 
 document.getElementById("randomDay").innerHTML = "Your lucky day is: " + randomMonth + " " + randomDay;
 
-// add next line to the HTML
+// add next 2 lines to the HTML
 
-//<p id="randomDay"></p>
+// <p id="randomDay"></p>
+
+//<script src="js/days.js"></script>
