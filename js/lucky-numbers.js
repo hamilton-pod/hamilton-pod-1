@@ -9,4 +9,4 @@ document.getElementById("number").innerHTML = "Your lucky number is: " + randomN
 
 // <p id="number"></p>
 
-//<script src="js/lucky-numbers.js"></script>
+// <script src="js/lucky-numbers.js"></script>
