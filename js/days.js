@@ -15,4 +15,4 @@ document.getElementById("randomDay").innerHTML = "Your lucky day is: " + randomM
 
 // <p id="randomDay"></p>
 
-//<script src="js/days.js"></script>
+// <script src="js/days.js"></script>
