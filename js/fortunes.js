@@ -46,13 +46,23 @@ var fortunes = [
     {fortune: "You will travel to many exotic places in your lifetime.", type: "good"},
     {fortune: "Your ability for accomplishment will follow with success.", type: "good"},
     {fortune: "Nothing astonishes men so much as common sense and plain dealing.", type: "good"},
-    {fortune: "Its amazing how much good you can do if you dont care who gets the credit.", type: "good"},
+    {fortune: "Its amazing how much good you can do if you don't care who gets the credit.", type: "good"},
     {fortune: "Wouldn't it be ironic... to die in the living room?", type: "bad"}
 ];
 
-// Generates a random index to grab fortune from array
-var randomIndex = Math.floor(Math.random() * (fortunes.length-1));
 
+var cookiePic = document.getElementById('default-cookie-pic');
 
-// Replace the empty <p> in HTML document with randomly generated fortune
-document.getElementById('fortune').innerHTML = fortunes[randomIndex].fortune;
+// When cookie pic is clicked...
+cookiePic.addEventListener('click', function(event) {
+
+    // Generates a random index to grab fortune from array
+    var randomIndex = Math.floor(Math.random() * (fortunes.length-1));
+
+    // Replace the empty <p> in HTML document with randomly generated fortune
+    var fortune = document.getElementById('fortune');
+    fortune.innerHTML = fortunes[randomIndex].fortune;
+
+    // Display the fortune paragraph
+    fortune.style.display = 'inherit';
+}, false);
