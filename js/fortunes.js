@@ -65,4 +65,13 @@ cookiePic.addEventListener('click', function(event) {
 
     // Display the fortune paragraph
     fortune.style.display = 'inherit';
+
+    // Hide default instructions
+    var defaultInstructions = document.getElementById('default-instructions');
+    defaultInstructions.style.display = 'none';
+
+    // Display repeat instructions
+    var repeatInstructions = document.getElementById('repeat-instructions');
+    repeatInstructions.style.display = 'inherit';
+
 }, false);
