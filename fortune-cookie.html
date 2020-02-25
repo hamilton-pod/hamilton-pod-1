@@ -3,20 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <title>Your fortune awaits...</title>
+    <link href="https://fonts.googleapis.com/css?family=Heebo:400,700,800,900|Open+Sans:300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
+<header>
+    <h1>Fortune</h1>
+    <h2>The Cookie</h2>
+</header>
+
+<!-- Main column -->
+
+<div id="main-col">
+    <img id="default-cookie-pic" src="images/fortune-cookie-placeholder.png" alt="Fortune cookie that lightly shakes on hover">
+    <p id="default-instructions">[ Crack open the cookie to reveal your fortune ]</p>
+
     <p id="fortune"></p>
-    <p id = "joke"></p>
-    <p id = "answer"></p>
-    <p id="randomDay"></p>
+    <p id="repeat-instructions">[ For a new fortune, click the cookie again ]</p>
+</div>
+
+
+<!-- Left column -->
+
+<div id="number-div">
     <p id="number"></p>
+</div>
+<div id="joke-div">
+    <p id="joke">Placeholder joke text</p>
+    <p id="answer">Placeholder answer text</p>
+</div>
+
+
+<!-- Right column -->
+
+<div id="randomDay-div">
+    <p id="randomDay"></p>
+</div>
+<div id="color-div">
+    <p id="color"></p>
+</div>
+
 
 
     <!--Custom Script-->
-    <script src="js/fortune-cookie.js"></script>
+    <script src="js/fortunes.js"></script>
 <!--    <script src="js/random-jokes.js"></script>-->
     <script src="js/days.js"></script>
     <script src="js/lucky-numbers.js"></script>
+    <script src="js/colors.js"></script>
 </body>
 </html>
