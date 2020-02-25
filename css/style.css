@@ -11,6 +11,13 @@ body, html {
     color: #463028;
 }
 
+body {
+    display: inline-grid;
+    grid-gap: 10px;
+    height: 100vh;
+    width: 100vw;
+}
+
 header h1 {
     text-transform: uppercase;
     font-family: 'Heebo', sans-serif;
@@ -31,15 +38,19 @@ header h2 {
     font-size: 2.5em;
 }
 
+header {
+    grid-area: 1 / 1 / 2 / -1;
+}
+
 p {
     font-size: 1.4em;
 }
 
 #default-cookie-pic {
-    margin-top: 3em;
-    max-width: 400px;
+    height:50vh;
 }
 
+/* Wiggle animations on hover over cookie image */
 #default-cookie-pic:hover {
     cursor: pointer;
     -webkit-animation-name: wiggle;
@@ -50,28 +61,6 @@ p {
     -ms-animation-iteration-count: infinite;
     -webkit-animation-timing-function: ease-in-out;
     -ms-animation-timing-function: ease-in-out;
-}
-
-#fortune {
-    display: none;
-    background-color: white;
-    padding: 40px;
-    border: 3px solid lightgray;
-    color: darkblue;
-    width: 80%;
-    font-weight: bold;
-    max-width: 700px;
-    font-size: 1.7em;
-    margin: 10px auto;
-}
-
-#default-instructions {
-    color: #809c80;
-}
-
-#repeat-instructions {
-    display: none;
-    color: #809c80;
 }
 
 @-webkit-keyframes wiggle {
@@ -97,20 +86,106 @@ p {
     75% {transform: rotate(-5deg);}
     100% {transform: rotate(0deg);}
 }
+/******** end of wiggle animation CSS *********/
 
-/* For phones and extra small screens */
+
+#fortune {
+    display: none;
+    background-color: white;
+    padding: 40px;
+    border: 3px solid lightgray;
+    color: darkblue;
+    width: 80%;
+    font-weight: bold;
+    max-width: 700px;
+    font-size: 1.7em;
+    margin: 10px auto;
+}
+
+#default-instructions {
+    color: #809c80;
+}
+
+#repeat-instructions {
+    display: none;
+    color: #809c80;
+}
+
+#joke-div, #number-div, #randomDay-div, #color-div {
+    background-color: #d7b082;
+}
+
+/* For phones and extra small screens (575px width and smaller) */
 
 @media screen and (max-width:575px) {
-    #joke, #answer, #randomDay, #number {
+    #joke, #answer, #randomDay, #number, #color {
         display: none;
     }
 
-    header h1 {
-    width: 95%;}
-}
+    body {
+        grid-template-rows: 1fr 3fr;
+        grid-template-columns: 1fr;
+    }
 
-    #default-cookie-pic {
-        width: 70%;
+    #main-col {
+        grid-area: 2 / 1 / 3 / -1 ;
+        margin: auto;
     }
 }
 
+/* For tablets and medium sized screens (576px - 991px) */
+
+@media screen and (min-width: 576px) and (max-width:991px) {
+    #randomDay, #color {
+         display: none;
+     }
+
+    body {
+        grid-template-rows: 1fr 2fr 2fr;
+        grid-template-columns: 2fr 4fr;
+    }
+
+    #number-div {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    #joke-div {
+        grid-area: 3 / 1 / 4 / 2;
+    }
+
+    #main-col {
+        grid-area: 2 / 2 / 4 / -1;
+        margin: auto;
+    }
+}
+
+/* For desktops and larger screens (992px and larger) */
+
+@media screen and (min-width: 992px) {
+
+    body {
+        grid-template-rows: 1fr 2fr 2fr;
+        grid-template-columns: 2fr 4fr 2fr;
+    }
+
+    #number-div {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    #joke-div {
+        grid-area: 3 / 1 / 4 / 2;
+    }
+
+    #main-col {
+        grid-area: 2 / 2 / 4 / 3;
+        margin: auto;
+    }
+
+    #randomDay-div {
+        grid-area: 2 / 3 / 3 / -1;
+    }
+
+    #color-div {
+        grid-area: 3 / 3 / 4 / -1;
+    }
+}
