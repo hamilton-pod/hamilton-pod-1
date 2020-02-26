@@ -7,20 +7,19 @@ var colors = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Purple', 'Pink', 'Whi
 var randomColor = Math.floor(Math.random() * (colors.length-1));
 
 // Display the lucky color to HTML doc
-document.getElementById('color').innerHTML = "Your lucky color is: " + colors[randomColor];
+document.getElementById('color').innerHTML = colors[randomColor];
 
 
+
+var cookiePic = document.getElementById('default-cookie-pic');
 
 cookiePic.addEventListener('click', function(event) {
 
-    randomColor.style.display = 'inherit';
+    var colors = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Purple', 'Pink', 'White', 'Black', 'Brown', 'Azure', 'Ivory', 'Teal', 'Silver', 'Navy blue', 'Pea green', 'Gray', 'Orange', 'Maroon', 'Charcoal', 'Aquamarine', 'Coral', 'Fuchsia', 'Wheat', 'Lime', 'Crimson', 'Khaki', 'Hot pink', 'Magenta', 'Plum', 'Olive', 'Cyan'];
 
-    // Hide default instructions
-    var defaultInstructions = document.getElementById('default-instructions');
-    defaultInstructions.style.display = 'none';
+    var randomColor = Math.floor(Math.random() * (colors.length-1));
 
-    // Display repeat instructions
-    var repeatInstructions = document.getElementById('repeat-instructions');
-    repeatInstructions.style.display = 'inherit';
+    document.getElementById('color').innerHTML = colors[randomColor];
+
 
 }, false);
