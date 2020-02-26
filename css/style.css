@@ -1,14 +1,21 @@
+
 * {
     box-sizing: border-box;
+    --lightest-color: #FCF7F7;
+    --header-color: #da8f6e;
+    --secondary-background-color: #d7b082;
+    --shadow-color: #463028;
+    --accent-color: #809c80;
+    --background-color: #F7E8BF;
 }
 
 body, html {
     margin: 0;
     padding: 0;
-    background-color: #f7e8bf;
+    background-color: var(--background-color);
     text-align: center;
     font-family: "Open Sans", sans-serif;
-    color: #463028;
+    color: var(--accent-color);
 }
 
 body {
@@ -25,16 +32,16 @@ header h1 {
     margin-bottom: 0;
     font-weight: 800;
     letter-spacing: 3px;
-    color: #da8f6e;
+    color: var(--header-color);
     line-height: .5;
 }
 
 header h2 {
     text-transform: lowercase;
     font-family: 'Open Sans', sans-serif;
-    margin-top: 0;
-    letter-spacing: 15px;
-    color: #809c80;
+    margin-top: 10px;
+    letter-spacing: 5px;
+    color: var(--accent-color);
     font-size: 2.5em;
 }
 
@@ -43,11 +50,16 @@ header {
 }
 
 p {
-    font-size: 1.4em;
+    font-size: 1em;
+}
+
+#color-div, #randomDay-div, #joke-div, #number-div{
+    padding: 10%;
+    margin-top: 40%;
 }
 
 #default-cookie-pic {
-    height:50vh;
+    height:40vh;
 }
 
 /* Wiggle animations on hover over cookie image */
@@ -91,10 +103,10 @@ p {
 
 #fortune {
     display: none;
-    background-color: white;
+    background-color: var(--lightest-color);;
     padding: 40px;
-    border: 3px solid lightgray;
-    color: darkblue;
+    border: 1px solid var(--shadow-color);;
+    color: var(--accent-color);
     width: 80%;
     font-weight: bold;
     max-width: 700px;
@@ -103,17 +115,14 @@ p {
 }
 
 #default-instructions {
-    color: #809c80;
+    color: var(--accent-color);
 }
 
 #repeat-instructions {
     display: none;
-    color: #809c80;
+    color: var(--accent-color);
 }
 
-#joke-div, #number-div, #randomDay-div, #color-div {
-    background-color: #d7b082;
-}
 
 /* For phones and extra small screens (575px width and smaller) */
 
