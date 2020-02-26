@@ -148,3 +148,17 @@ function randomJoke(objectArray){
 
 randomJoke(jokes);
 
+
+var cookiePic = document.getElementById('default-cookie-pic');
+
+cookiePic.addEventListener('click', function(event) {
+
+    var randomIndex = Math.floor(Math.random() * (jokes.length- 1));
+
+    // Replace the empty <p> in HTML document with randomly generated fortune
+    document.getElementById('joke').innerHTML = jokes[randomIndex].joke;
+
+    // Replace the empty <p> in HTML document with randomly generated fortune
+    document.getElementById('answer').innerHTML = jokes[randomIndex].answer;
+
+}, false);
