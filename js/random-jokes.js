@@ -130,19 +130,21 @@ var jokes = [
 ];
 
 
-// Get random joke from array of objects
-var randomIndex = Math.floor(Math.random() * (jokes.length));
 
 
-// loop through array of jokes and answers
-jokes.forEach(function(joke){
+function randomJoke(objectArray){
 
-    // Replace the empty <p> in HTML document with randomly generated fortune
-    document.getElementById('joke').innerHTML = joke.joke[randomIndex];
+    // // Get random joke from array of objects
+    var randomIndex = Math.floor(Math.random() * (jokes.length- 1));
 
     // Replace the empty <p> in HTML document with randomly generated fortune
-    document.getElementById('answer').innerHTML = joke.answer[randomIndex];
+    document.getElementById('joke').innerHTML = jokes[randomIndex].joke;
 
-});
+    // Replace the empty <p> in HTML document with randomly generated fortune
+    document.getElementById('answer').innerHTML = jokes[randomIndex].answer;
 
+
+}
+
+randomJoke(jokes);
 
