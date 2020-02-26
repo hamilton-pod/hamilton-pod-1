@@ -11,6 +11,7 @@ document.getElementById('color').innerHTML = colors[randomColor];
 
 
 
+// when you click on cookiePic, it generates and displays a new random color
 var cookiePic = document.getElementById('default-cookie-pic');
 
 cookiePic.addEventListener('click', function(event) {

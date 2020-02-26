@@ -14,6 +14,7 @@ document.getElementById("randomDay").innerHTML = randomMonth + " " + randomDay;
 
 
 
+// when you click on cookiePic, it generates and displays a new random day
 var cookiePic = document.getElementById('default-cookie-pic');
 
 cookiePic.addEventListener('click', function(event) {
