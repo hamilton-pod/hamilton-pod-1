@@ -8,7 +8,7 @@ var jokes = [
     },
 
     {
-        Joke: "Q: Did you hear the joke about the roof?",
+        joke: "Q: Did you hear the joke about the roof?",
         answer: "A: Never mind, it's over your head!"
     },
 
@@ -125,8 +125,7 @@ var jokes = [
     {
         joke:"Q: How many peas are there in a pint?",
         answer:"A: There is one 'P' in a 'pint'."
-    },
-
+    }
 ];
 
 
