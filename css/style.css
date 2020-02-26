@@ -53,9 +53,19 @@ p {
     font-size: 1em;
 }
 
-#color-div, #randomDay-div, #joke-div, #number-div{
+.section-headers{
+    font-family: 'Heebo', sans-serif;
+    color: var(--accent-color);
+}
+
+#randomDay-div, #number-div{
     padding: 10%;
     margin-top: 40%;
+}
+
+#color-div, #joke-div{
+    padding: 10%;
+    margin-top: 5%;
 }
 
 #default-cookie-pic {
@@ -69,7 +79,7 @@ p {
     -ms-animation-name: wiggle;
     -ms-animation-duration: 1000ms;
     -webkit-animation-duration: 1000ms;
-    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: 1;
     -ms-animation-iteration-count: infinite;
     -webkit-animation-timing-function: ease-in-out;
     -ms-animation-timing-function: ease-in-out;
@@ -103,15 +113,16 @@ p {
 
 #fortune {
     display: none;
-    background-color: var(--lightest-color);;
+    background-color: var(--lightest-color);
     padding: 40px;
-    border: 1px solid var(--shadow-color);;
+    /*border: 1px solid var(--header-color);*/
     color: var(--accent-color);
     width: 80%;
     font-weight: bold;
     max-width: 700px;
     font-size: 1.7em;
     margin: 10px auto;
+    box-shadow: 0 0 10px var(--secondary-background-color);
 }
 
 #default-instructions {
