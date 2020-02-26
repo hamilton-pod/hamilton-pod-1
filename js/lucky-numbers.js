@@ -1,18 +1,19 @@
 "use strict";
 
-// // documents a random number from 0 - 100
+// generates a random number from 0 - 100
 var randomNumber = Math.floor(Math.random() * 101);
-var number = document.getElementById("number").innerHTML = "Your lucky number is: " + randomNumber;
+var number = document.getElementById("number").innerHTML = randomNumber;
 
+// displays the random number to HTML
 document.getElementById('number').innerHTML = number;
 
 
-
+// when you click on cookiePic, it generates and displays a new random number
 var cookiePic = document.getElementById('default-cookie-pic');
 
 cookiePic.addEventListener('click', function(event) {
     var randomNumber = Math.floor(Math.random() * 101);
-    var number = document.getElementById("number").innerHTML = "Your lucky number is: " + randomNumber;
+    var number = document.getElementById("number").innerHTML = randomNumber;
 
     document.getElementById('number').innerHTML = number;
 

@@ -149,6 +149,10 @@ function randomJoke(objectArray){
 randomJoke(jokes);
 
 
+
+
+
+// when you click on cookiePic, it generates and displays a new random joke and answer
 var cookiePic = document.getElementById('default-cookie-pic');
 
 cookiePic.addEventListener('click', function(event) {
