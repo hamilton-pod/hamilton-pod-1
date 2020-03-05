@@ -46,13 +46,23 @@ header h2 {
 }
 
 header {
-    grid-area: 1 / 1 / 2 / -1;
+    /*grid-area: 1 / 1 / 2 / -1;*/
+    grid-area: 1 / 1 / 2 / 3;
 }
 
 p {
     font-size: 1em;
 }
 
+#left-col{
+    position: fixed;
+    /*top: 100px;*/
+    /*left: 100px;*/
+    height: 100vh;
+    width: 50%;
+    background-color: var(--background-color);
+    box-shadow: 0 0 5px 1px var(--shadow-color);
+}
 
 /*---------------"CARDS"-------------*/
 .section-headers{
@@ -62,42 +72,48 @@ p {
 
 #randomDay-div, #number-div{
     padding: 10%;
-    margin: 20% 5%;
+    margin: 5% 5%;
     transition: all 0.3s ease-out;
     background-color: transparent;
     border-radius: 5px;
-    box-shadow: 0 0 20px 1px var(--shadow-color);
+    box-shadow: 0 0 5px 1px var(--shadow-color);
 }
 
 #color-div, #joke-div{
     padding: 10%;
-    margin: 10% 5%;
+    margin: 5% 5%;
     transition: all 0.3s ease-out;
     background-color: transparent;
     border-radius: 5px;
-    box-shadow: 0 0 20px 1px var(--shadow-color);
+    box-shadow: 0 0 5px 1px var(--shadow-color);
 }
 #randomDay-div:hover, #number-div:hover{
     padding: 10%;
-    margin: 20% 5%;
+    margin: 5% 5%;
     box-shadow: 0 0 30px 5px var(--shadow-color);
     transform: translateY(-5px) scale(1.005) translateZ(0);
 }
 
 #color-div:hover, #joke-div:hover{
     padding: 10%;
-    margin: 10% 5%;
+    margin: 5% 5%;
     box-shadow: 0 0 30px 5px var(--shadow-color);
     transform: translateY(-5px) scale(1.005) translateZ(0);
 }
 
 #color-circle{
-    height: 50px;
-    width: 50px;
-    padding: 20%;
+    height: 100px;
+    width: 100px;
+    margin: 20px;
     border-radius: 50%;
     background-color: var(--accent-color);
     color: var(--accent-color);
+}
+
+#color-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
@@ -157,7 +173,7 @@ p {
     margin: 10px auto;
     background-color: var(--lightest-color);
     border-radius: 5px;
-    box-shadow: 0 0 20px 1px var(--shadow-color);
+    /*box-shadow: 0 0 5px 1px var(--shadow-color);*/
 }
 
 #default-instructions {
@@ -187,35 +203,43 @@ p {
 @media screen and (min-width: 576px) and (max-width:991px) {
 
     body {
-        grid-template-rows: 1fr 2fr 2fr;
-        grid-template-columns: 2fr 4fr;
+        /*grid-template-rows: 1fr 2fr 2fr;*/
+        /*grid-template-columns: 2fr 4fr 2fr;*/
 
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
     }
 
     #number-div {
-        grid-area: 2 / 1 / 3 / 2;
-
+        /*grid-area: 2 / 1 / 3 / 2;*/
+        grid-area: 3 / 3 / 4 / 5;
     }
 
     #joke-div {
-        grid-area: 3 / 1 / 4 / 2;
+        /*grid-area: 3 / 1 / 4 / 2;*/
+        grid-area: 4 / 3 / 5 / 5;
+    }
+
+    #main-col {
+        /*grid-area: 2 / 2 / 4 / 3;*/
+        /*margin: auto;*/
+        grid-area: 2 / 1 / 5 / 3;
+        /*position: fixed;*/
+
 
     }
 
     #randomDay-div {
-        grid-area: 2 / 3 / 3 / -1;
-
+        /*grid-area: 2 / 3 / 3 / -1;*/
+        grid-area: 1 / 3 / 2 / 5;
     }
 
     #color-div {
-        grid-area: 3 / 3 / 4 / -1;
-
-    }
-
-    #main-col {
-        grid-area: 2 / 2 / 4 / -1;
-        margin: auto;
-
+        /*grid-area: 3 / 3 / 4 / -1;*/
+        grid-area: 2 / 3 / 3 / 5;
     }
 }
 
@@ -224,28 +248,42 @@ p {
 @media screen and (min-width: 992px) {
 
     body {
-        grid-template-rows: 1fr 2fr 2fr;
-        grid-template-columns: 2fr 4fr 2fr;
+        /*grid-template-rows: 1fr 2fr 2fr;*/
+        /*grid-template-columns: 2fr 4fr 2fr;*/
+
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
     }
 
     #number-div {
-        grid-area: 2 / 1 / 3 / 2;
+        /*grid-area: 2 / 1 / 3 / 2;*/
+        grid-area: 3 / 3 / 4 / 5;
     }
 
     #joke-div {
-        grid-area: 3 / 1 / 4 / 2;
+        /*grid-area: 3 / 1 / 4 / 2;*/
+        grid-area: 4 / 3 / 5 / 5;
     }
 
     #main-col {
-        grid-area: 2 / 2 / 4 / 3;
-        margin: auto;
+        /*grid-area: 2 / 2 / 4 / 3;*/
+        /*margin: auto;*/
+        grid-area: 2 / 1 / 5 / 3;
+        /*position: fixed;*/
+
+
     }
 
     #randomDay-div {
-        grid-area: 2 / 3 / 3 / -1;
+        /*grid-area: 2 / 3 / 3 / -1;*/
+        grid-area: 1 / 3 / 2 / 5;
     }
 
     #color-div {
-        grid-area: 3 / 3 / 4 / -1;
+        /*grid-area: 3 / 3 / 4 / -1;*/
+        grid-area: 2 / 3 / 3 / 5;
     }
 }
