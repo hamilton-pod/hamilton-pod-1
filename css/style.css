@@ -244,7 +244,7 @@ p {
     header h2 {
         text-transform: lowercase;
         font-family: 'Open Sans', sans-serif;
-        margin-top: 40px;
+        margin-top: 10px;
         letter-spacing: 2px;
         color: var(--accent-color);
         font-size: 2em;

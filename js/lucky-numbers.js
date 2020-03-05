@@ -1,10 +1,16 @@
 "use strict";
 
 // generates a random number from 0 - 100
-var randomNumber = Math.floor(Math.random() * 101);
-var number = document.getElementById("number").innerHTML = randomNumber;
+var randomNumber1 = Math.floor(Math.random() * 99);
+var randomNumber2 = Math.floor(Math.random() * 99);
+var randomNumber3 = Math.floor(Math.random() * 99);
+var randomNumber4 = Math.floor(Math.random() * 99);
+var randomNumber5 = Math.floor(Math.random() * 99);
+var randomNumber6 = Math.floor(Math.random() * 99);
 
 // displays the random number to HTML
+var number = document.getElementById("number").innerHTML = randomNumber1 + ' - ' + randomNumber2 + ' - ' + randomNumber3 + ' - ' + randomNumber4 + ' - ' + randomNumber5 + ' - ' +randomNumber6 ;
+
 document.getElementById('number').innerHTML = number;
 
 
@@ -12,8 +18,14 @@ document.getElementById('number').innerHTML = number;
 var cookiePic = document.getElementById('default-cookie-pic');
 
 cookiePic.addEventListener('click', function(event) {
-    var randomNumber = Math.floor(Math.random() * 101);
-    var number = document.getElementById("number").innerHTML = randomNumber;
+    var randomNumber1 = Math.floor(Math.random() * 99);
+    var randomNumber2 = Math.floor(Math.random() * 99);
+    var randomNumber3 = Math.floor(Math.random() * 99);
+    var randomNumber4 = Math.floor(Math.random() * 99);
+    var randomNumber5 = Math.floor(Math.random() * 99);
+    var randomNumber6 = Math.floor(Math.random() * 99);
+
+    var number = document.getElementById("number").innerHTML = randomNumber1 + ' - ' + randomNumber2 + ' - ' + randomNumber3 + ' - ' + randomNumber4 + ' - ' + randomNumber5 + ' - ' +randomNumber6 ;
 
     document.getElementById('number').innerHTML = number;
 
