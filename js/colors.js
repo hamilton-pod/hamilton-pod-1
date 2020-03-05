@@ -22,7 +22,7 @@ cookiePic.addEventListener('click', function(event) {
 
     document.getElementById('color').innerHTML = colors[randomColor];
 
-
+    changeCurrentColor(colors[randomColor]);  //Not function in on click
 
 }, false);
 
@@ -41,12 +41,12 @@ function changeCurrentColor (color) {
      switch (color) {
             case "Red":
                 result = console.log("Yes, red is a color.");
-                bodyStyles.setProperty('--lightest-color', '#FF0000');
+                bodyStyles.setProperty('--lightest-color', '#FB4B4E');
                 bodyStyles.setProperty('--header-color', '#3E000C');
                 bodyStyles.setProperty('--secondary-background-color', '#FB4B4E');
-                bodyStyles.setProperty('--shadow-color', '#FFCBDD');
-                bodyStyles.setProperty('--accent-color', '#7C0B2B');
-                bodyStyles.setProperty('--background-color', '#FB4B4E');
+                bodyStyles.setProperty('--shadow-color', '#7C0B2B');
+                bodyStyles.setProperty('--accent-color', '#FF0000');
+                bodyStyles.setProperty('--background-color', '#FCF7F7');
                 break;
             case "Orange":
                 result = console.log("Yes, orange is a color.");
