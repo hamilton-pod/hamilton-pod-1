@@ -61,11 +61,24 @@ p {
 #randomDay-div, #number-div{
     padding: 10%;
     margin-top: 40%;
+    transition: all 0.3s ease-out;
 }
 
 #color-div, #joke-div{
     padding: 10%;
     margin-top: 5%;
+    transition: all 0.3s ease-out;
+}
+#randomDay-div:hover, #number-div:hover{
+    padding: 10%;
+    margin-top: 40%;
+    transform: translateY(-5px) scale(1.005) translateZ(0);
+}
+
+#color-div:hover, #joke-div:hover{
+    padding: 10%;
+    margin-top: 5%;
+    transform: translateY(-5px) scale(1.005) translateZ(0);
 }
 
 #default-cookie-pic {
