@@ -12,7 +12,7 @@
 body, html {
     margin: 0;
     padding: 0;
-    background-color: var(--background-color);
+    background-color: var(--lightest-color);
     text-align: center;
     font-family: "Open Sans", sans-serif;
     color: var(--accent-color);
@@ -53,6 +53,8 @@ p {
     font-size: 1em;
 }
 
+
+/*---------------"CARDS"-------------*/
 .section-headers{
     font-family: 'Heebo', sans-serif;
     color: var(--accent-color);
@@ -62,7 +64,7 @@ p {
     padding: 10%;
     margin: 20% 5%;
     transition: all 0.3s ease-out;
-    background-color: var(--lightest-color);
+    background-color: transparent;
     border-radius: 5px;
     box-shadow: 0 0 20px 1px var(--shadow-color);
 }
@@ -71,7 +73,7 @@ p {
     padding: 10%;
     margin: 10% 5%;
     transition: all 0.3s ease-out;
-    background-color: var(--lightest-color);
+    background-color: transparent;
     border-radius: 5px;
     box-shadow: 0 0 20px 1px var(--shadow-color);
 }
@@ -89,6 +91,17 @@ p {
     transform: translateY(-5px) scale(1.005) translateZ(0);
 }
 
+#color-circle{
+    height: 50px;
+    width: 50px;
+    padding: 20%;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+
+/*---------------COOKIE-------------*/
 #default-cookie-pic {
     height:40vh;
 }
@@ -132,6 +145,7 @@ p {
 /******** end of wiggle animation CSS *********/
 
 
+/*---------------"FORTUNE CARD"-------------*/
 #fortune {
     display: none;
     padding: 40px;
@@ -156,51 +170,56 @@ p {
 }
 
 
-/* For phones and extra small screens (575px width and smaller) */
+/* ---------------------------SMALL SCREEN SIZES (575px width and smaller)------------------------ */
 
 @media screen and (max-width:575px) {
-    #joke, #answer, #randomDay, #number, #color {
-        display: none;
-    }
 
     body {
         grid-template-rows: 1fr 3fr;
         grid-template-columns: 1fr;
-    }
-
-    #main-col {
         grid-area: 2 / 1 / 3 / -1 ;
         margin: auto;
     }
 }
 
-/* For tablets and medium sized screens (576px - 991px) */
+/* ---------------------------MEDIUM SCREEN SIZES (576px - 991px)---------------------------- */
 
 @media screen and (min-width: 576px) and (max-width:991px) {
-    #randomDay, #color {
-         display: none;
-     }
 
     body {
         grid-template-rows: 1fr 2fr 2fr;
         grid-template-columns: 2fr 4fr;
+
     }
 
     #number-div {
         grid-area: 2 / 1 / 3 / 2;
+
     }
 
     #joke-div {
         grid-area: 3 / 1 / 4 / 2;
+
+    }
+
+    #randomDay-div {
+        grid-area: 2 / 3 / 3 / -1;
+
+    }
+
+    #color-div {
+        grid-area: 3 / 3 / 4 / -1;
+
     }
 
     #main-col {
         grid-area: 2 / 2 / 4 / -1;
         margin: auto;
+
     }
 }
 
-/* For desktops and larger screens (992px and larger) */
+/* ---------------------------LARGE SCREEN SIZES (992px and larger)--------------------------- */
 
 @media screen and (min-width: 992px) {
 
