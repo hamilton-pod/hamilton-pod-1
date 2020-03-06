@@ -12,7 +12,7 @@
 body, html {
     margin: 0;
     padding: 0;
-    background-color: var(--background-color);
+    background-color: var(--lightest-color);
     text-align: center;
     font-family: "Open Sans", sans-serif;
     color: var(--accent-color);
@@ -45,14 +45,21 @@ header h2 {
     font-size: 2.5em;
 }
 
-header {
-    grid-area: 1 / 1 / 2 / -1;
-}
-
 p {
     font-size: 1em;
 }
 
+#left-col{
+    position: fixed;
+    /*top: 100px;*/
+    /*left: 100px;*/
+    height: 100vh;
+    width: 50%;
+    background-color: var(--background-color);
+    box-shadow: 0 0 5px 1px var(--shadow-color);
+}
+
+/*---------------"CARDS"-------------*/
 .section-headers{
     font-family: 'Heebo', sans-serif;
     color: var(--accent-color);
@@ -60,27 +67,52 @@ p {
 
 #randomDay-div, #number-div{
     padding: 10%;
-    margin-top: 40%;
+    margin: 5% 5%;
     transition: all 0.3s ease-out;
+    background-color: transparent;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 1px var(--shadow-color);
 }
 
 #color-div, #joke-div{
     padding: 10%;
-    margin-top: 5%;
+    margin: 5% 5%;
     transition: all 0.3s ease-out;
+    background-color: transparent;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 1px var(--shadow-color);
 }
 #randomDay-div:hover, #number-div:hover{
     padding: 10%;
-    margin-top: 40%;
+    margin: 5% 5%;
+    box-shadow: 0 0 30px 5px var(--shadow-color);
     transform: translateY(-5px) scale(1.005) translateZ(0);
 }
 
 #color-div:hover, #joke-div:hover{
     padding: 10%;
-    margin-top: 5%;
+    margin: 5% 5%;
+    box-shadow: 0 0 30px 5px var(--shadow-color);
     transform: translateY(-5px) scale(1.005) translateZ(0);
 }
 
+#color-circle{
+    height: 100px;
+    width: 100px;
+    margin: 20px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+#color-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/*---------------COOKIE-------------*/
 #default-cookie-pic {
     height:40vh;
 }
@@ -124,18 +156,18 @@ p {
 /******** end of wiggle animation CSS *********/
 
 
+/*---------------"FORTUNE CARD"-------------*/
 #fortune {
     display: none;
-    background-color: var(--lightest-color);
     padding: 40px;
-    /*border: 1px solid var(--header-color);*/
     color: var(--accent-color);
     width: 80%;
     font-weight: bold;
     max-width: 700px;
     font-size: 1.7em;
     margin: 10px auto;
-    box-shadow: 0 0 10px var(--secondary-background-color);
+    background-color: var(--lightest-color);
+    border-radius: 5px;
 }
 
 #default-instructions {
@@ -148,77 +180,196 @@ p {
 }
 
 
-/* For phones and extra small screens (575px width and smaller) */
+/* ---------------------------SMALL SCREEN SIZES (575px width and smaller)------------------------ */
 
 @media screen and (max-width:575px) {
-    #joke, #answer, #randomDay, #number, #color {
-        display: none;
-    }
 
     body {
-        grid-template-rows: 1fr 3fr;
+        display: grid;
         grid-template-columns: 1fr;
-    }
-
-    #main-col {
-        grid-area: 2 / 1 / 3 / -1 ;
-        margin: auto;
-    }
-}
-
-/* For tablets and medium sized screens (576px - 991px) */
-
-@media screen and (min-width: 576px) and (max-width:991px) {
-    #randomDay, #color {
-         display: none;
-     }
-
-    body {
-        grid-template-rows: 1fr 2fr 2fr;
-        grid-template-columns: 2fr 4fr;
+        grid-template-rows: repeat(6, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
     }
 
     #number-div {
-        grid-area: 2 / 1 / 3 / 2;
+        grid-area: 5 / 1 / 6 / 2;
     }
 
     #joke-div {
-        grid-area: 3 / 1 / 4 / 2;
+        grid-area: 6 / 1 / 7 / 2;
     }
 
     #main-col {
-        grid-area: 2 / 2 / 4 / -1;
-        margin: auto;
+        grid-area: 2 / 1 / 3 / 2;;
     }
+
+    #randomDay-div {
+        grid-area: 3 / 1 / 4 / 2;
+    }
+
+    #color-div {
+        grid-area: 4 / 1 / 5 / 2;
+    }
+    header{
+        grid-area: 1 / 1 / 2 / 3;
+        margin-top: 10%;
+    }
+
+    .parent {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    #left-col{
+        position: static;
+        width: auto;
+        height: auto;
+    }
+
+    header h1 {
+        text-transform: uppercase;
+        font-family: 'Heebo', sans-serif;
+        font-size: 4em;
+        margin-bottom: 0;
+        font-weight: 800;
+        letter-spacing: 1px;
+        color: var(--header-color);
+        line-height: .5;
+    }
+
+    header h2 {
+        text-transform: lowercase;
+        font-family: 'Open Sans', sans-serif;
+        margin-top: 10px;
+        letter-spacing: 2px;
+        color: var(--accent-color);
+        font-size: 2em;
+    }
+
+    #default-cookie-pic {
+        height:20vh;
+    }
+
 }
 
-/* For desktops and larger screens (992px and larger) */
+/* ---------------------------MEDIUM SCREEN SIZES (576px - 991px)---------------------------- */
+
+@media screen and (min-width: 576px) and (max-width:991px) {
+
+    body {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    #number-div {
+        grid-area: 3 / 3 / 4 / 5;
+    }
+
+    #joke-div {
+        grid-area: 4 / 3 / 5 / 5;
+    }
+
+    #main-col {
+        grid-area: 2 / 1 / 5 / 3;
+    }
+
+    #randomDay-div {
+        grid-area: 1 / 3 / 2 / 5;
+    }
+
+    #color-div {
+        grid-area: 2 / 3 / 3 / 5;
+    }
+
+    header h1 {
+        text-transform: uppercase;
+        font-family: 'Heebo', sans-serif;
+        font-size: 3.5em;
+        margin-bottom: 0;
+        font-weight: 800;
+        letter-spacing: 1px;
+        color: var(--header-color);
+        line-height: .5;
+    }
+
+    header h2 {
+        text-transform: lowercase;
+        font-family: 'Open Sans', sans-serif;
+        margin-top: 10px;
+        letter-spacing: 2px;
+        color: var(--accent-color);
+        font-size: 2em;
+    }
+
+    header{
+        margin-top: 50%;
+    }
+
+    #default-cookie-pic {
+        height:20vh;
+    }
+
+}
+/* ---------------------------LARGE SCREEN SIZES (992px and larger)--------------------------- */
 
 @media screen and (min-width: 992px) {
 
     body {
-        grid-template-rows: 1fr 2fr 2fr;
-        grid-template-columns: 2fr 4fr 2fr;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
     }
 
     #number-div {
-        grid-area: 2 / 1 / 3 / 2;
+        grid-area: 3 / 3 / 4 / 5;
     }
 
     #joke-div {
-        grid-area: 3 / 1 / 4 / 2;
+        grid-area: 4 / 3 / 5 / 5;
     }
 
     #main-col {
-        grid-area: 2 / 2 / 4 / 3;
-        margin: auto;
+        grid-area: 2 / 1 / 5 / 3;
     }
 
     #randomDay-div {
-        grid-area: 2 / 3 / 3 / -1;
+        grid-area: 1 / 3 / 2 / 5;
     }
 
     #color-div {
-        grid-area: 3 / 3 / 4 / -1;
+        grid-area: 2 / 3 / 3 / 5;
+    }
+    header {
+        grid-area: 1 / 1 / 2 / 3;
+    }
+
+    header h1 {
+        text-transform: uppercase;
+        font-family: 'Heebo', sans-serif;
+        font-size: 5em;
+        margin-top: 120px;
+        margin-bottom: 0;
+        font-weight: 800;
+        letter-spacing: 3px;
+        color: var(--header-color);
+        line-height: .5;
+    }
+
+    header h2 {
+        text-transform: lowercase;
+        font-family: 'Open Sans', sans-serif;
+        margin-top: 40px;
+        letter-spacing: 4px;
+        color: var(--accent-color);
+        font-size: 2em;
     }
 }
